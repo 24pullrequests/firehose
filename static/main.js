@@ -1,17 +1,17 @@
 var evtSource = new EventSource('/events');
 var eventList = document.getElementById('events');
 
-evtSource.addEventListener('pkg', function(evt) {
-  var pkg = JSON.parse(evt.data);
-  console.debug('pkg:', pkg);
-  addToList(pkg)
+evtSource.addEventListener('pullRequest', function(evt) {
+  var pullRequest = JSON.parse(evt.data);
+  console.debug('pullRequest:', pullRequest);
+  addToList(pullRequest)
 }, false);
 
-function addToList (pkg) {
-  eventList.appendChild(createMediaItem(pkg));
+function addToList (pullRequest) {
+  eventList.appendChild(createMediaItem(pullRequest));
 }
 
-function createMediaItem (pkg) {
+function createMediaItem (pullRequest) {
   var item = document.createElement('li');
   item.className = 'media'
 
@@ -20,20 +20,20 @@ function createMediaItem (pkg) {
 
   var obj = document.createElement('div');
   obj.className = 'media-object';
-  obj.appendChild(createPictogram(pkg.platform));
+  obj.appendChild(createPictogram(pullRequest.platform));
 
   left.appendChild(obj);
 
   var body = document.createElement('a');
   body.className = 'media-body';
-  body.setAttribute('href', toLibrariesUrl(pkg));
+  body.setAttribute('href', toLibrariesUrl(pullRequest));
 
   var heading = document.createElement('h4');
   heading.className = 'media-heading';
-  heading.innerHTML = pkg.name;
+  heading.innerHTML = pullRequest.name;
 
   var text = document.createElement('p');
-  text.innerHTML = pkg.platform + ' - ' + pkg.name + ' - v' + pkg.version;
+  text.innerHTML = pullRequest.platform + ' - ' + pullRequest.name + ' - v' + pullRequest.version;
 
   body.appendChild(heading);
   body.appendChild(text);
@@ -50,6 +50,6 @@ function createPictogram (platform) {
   return pictogram;
 }
 
-function toLibrariesUrl(pkg) {
-  return 'http://libraries.io/' + [pkg.platform, pkg.name].join('/')
+function toLibrariesUrl(pullRequest) {
+  return 'http://libraries.io/' + [pullRequest.platform, pullRequest.name].join('/')
 }
