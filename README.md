@@ -1,11 +1,11 @@
-# Libraries Firehose
+# 24 Pull Requests Firehose
 
-Server sent event bridge for the [Libraries.io](https://libraries.io) events firehose.
+Server sent event bridge for the [24 Pull Requests](https://24pullrequests.com) events firehose.
 
 ## Development
 
-Source hosted at [GitHub](http://github.com/librariesio/firehose).
-Report issues/feature requests on [GitHub Issues](http://github.com/librariesio/firehose/issues). Follow us on Twitter [@librariesio](https://twitter.com/librariesio). We also hangout on [Gitter](https://gitter.im/librariesio/support).
+Source hosted at [GitHub](http://github.com/24pullrequests/firehose).
+Report issues/feature requests on [GitHub Issues](http://github.com/24pullrequests/firehose/issues). Follow us on Twitter [@24pullrequests](https://twitter.com/24pullrequests). We also hangout on [Gitter](https://gitter.im/24pullrequests/24pullrequests).
 
 ### Note on Patches/Pull Requests
 
@@ -19,4 +19,4 @@ Report issues/feature requests on [GitHub Issues](http://github.com/librariesio/
 
 ## Copyright
 
-Copyright (c) 2015 Andrew Nesbitt. See [LICENSE](https://github.com/librariesio/firehose/blob/master/LICENSE) for details.
+Copyright (c) 2015 Mauro Pompilio. See [LICENSE](https://github.com/24pullrequests/firehose/blob/master/LICENSE) for details.
