@@ -14,7 +14,7 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
-    "eventemitter3": "^4.0.6",
+    "eventemitter3": "^4.0.7",
     "express": "^4.17.1"
   }
 }
